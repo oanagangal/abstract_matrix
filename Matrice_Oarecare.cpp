@@ -51,8 +51,8 @@ ostream &Matrice_Oarecare::print(ostream &out)
 {
     for(int i=0;i<lin;i++)
         out<<v[i]<<endl;
-    //if(lin==v->getSize())
-        //out<<this->det(*this,lin);
+    if(lin==v->getSize())
+        out<<"det = "<<this->det(*this,lin);
 
     return out;
 }
