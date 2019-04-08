@@ -28,8 +28,9 @@ public:
 
 
     virtual bool Diag_Triangular()=0; // verific daca matrice triunghiulara e diagonala
-    virtual int get_dim(int)=0;
-    virtual Vector& get_array(int)=0;
+    virtual int get_dim(int)=0; // get_fim(1) returneaza nr coloane
+    // get_dim(orice nr) returneaza nr linii
+    virtual Vector& get_array(int)=0; // get_array(i) returneaza linia i
 
 };
 
