@@ -106,7 +106,7 @@ Matrice_Patratica Matrice_Patratica::minor(Matrice_Patratica m,int p, int q, int
     for(int i=0;i<size;i++)
             if (i != p)
             {
-                temp.v[row].setMem(size);
+                temp.v[row].setMem(size-1);
                 temp.v[row]=m.v[i].pop(q);
 
                 row++;
