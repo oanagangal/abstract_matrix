@@ -16,6 +16,8 @@ protected:
     ostream& print(ostream&) override;
     
     bool Triangular() override; // matrice triunghiulara sau nu
+    Matrice_Oarecare minor(Matrice_Oarecare,int,int,int); // returneaza minor de ordin inferior, folosesc in det()
+    int det(Matrice_Oarecare,int); // calculeaza determinantul
 
 public:
     explicit Matrice_Oarecare(int l=0);
