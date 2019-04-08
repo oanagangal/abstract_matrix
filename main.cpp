@@ -5,7 +5,7 @@
 #include "Matrice_Patratica.h"
 #include <fstream>
 
-bool funct(Matrice* A,Vector x,Vector y)
+bool funct(Matrice* A,Vector x,Vector y)  // verifica daca Ax=y
 {
     if(A->get_dim(1)!=x.getSize()||A->get_dim(2)!=y.getSize())
     {
@@ -26,12 +26,22 @@ int main() {
     f.open("Matrice_Oarecare");
 
 
-   Matrice_Patratica M(3);
-    f>>M;
-    cout<<M<<endl;
-   Vector x(3),y(3);
-   f>>x>>y;
-   cout<<funct(&M,x,y);
+    Matrice* M;
+    M=new Matrice_Patratica(3);
+    Vector x(3),y;
+    f>>(*M);
+    f>>x>>y;
+    cout<<(*M);
+    cout<<"Matrice diagonala: "<<endl;
+    cout<<M->Diag_Triangular()<<endl;
+    cout<<"x = "<<x<<endl;
+    cout<<"y = "<<y<<endl;
+    cout<<"Ax=y: "<<endl;
+    cout<<funct(M,x,y)<<endl<<endl;
+
+    Matrice_Oarecare N(3),P;
+    f>>N>>P;
+    cout<<N<<endl<<P<<endl<<N+P;
 
    f.close();
     return 0;
