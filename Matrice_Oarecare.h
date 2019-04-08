@@ -12,13 +12,12 @@ class Matrice_Oarecare: public Matrice{
     int lin;
 
 protected:
-    bool Triangular() override;
-
-public:
-
     istream& read(istream&) override;
     ostream& print(ostream&) override;
+    
+    bool Triangular() override; // matrice triunghiulara sau nu
 
+public:
     explicit Matrice_Oarecare(int l=0);
     Matrice_Oarecare(const Matrice_Oarecare&);
     ~Matrice_Oarecare() override;
