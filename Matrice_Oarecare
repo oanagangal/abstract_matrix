@@ -1,7 +1,17 @@
-1 2 1
-4 5 3
-1 1 1
+1 0 0  // nu specific dimensiunea cand declar Matrice_Patratica fara parametru
+0 2 0
+0 0 -3
 
 1 1 1
+3
+1 2 -3
 
-4 12 3
+4  // asta e nr de coloane atunci cand declar Matrice_Oarecare cu parametru
+1 -1 1 -2
+3 2 4 3
+5 5 5 -1
+
+3 4 // nr linii - nr coloane  atunci cand declar Matrice_Oarecare fara parametru
+1 1 0 0
+0 0 1 1
+1 1 1 1
