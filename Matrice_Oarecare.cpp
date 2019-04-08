@@ -140,3 +140,36 @@ Vector &Matrice_Oarecare::get_array(int i) {
         cout<<"element matrice inexistent"<<endl;
     return v[i];
 }
+
+Matrice_Oarecare Matrice_Oarecare::minor(Matrice_Oarecare m,int p,int q,int size)
+{
+    Matrice_Oarecare temp(size-1);
+    int row=0;
+    for(int i=0;i<size;i++)
+        if (i != p)
+        {
+            temp.v[row].setMem(size-1);
+            temp.v[row]=m.v[i].pop(q);
+
+            row++;
+        }
+    return temp;
+}
+
+int Matrice_Oarecare::det(Matrice_Oarecare b, int k)
+{
+    int d=0;
+    int sign=1;
+
+    Matrice_Oarecare temp1;
+    if(k==2)
+        return b.v[0][0]*b.v[1][1] - b.v[0][1]*b.v[1][0];
+
+    for(int i=0;i<k;i++)
+    {
+        temp1=minor(b,0,i,k);
+        d+=sign*b.v[0][i]*det(temp1,k-1);
+        sign*=-1;
+    }
+    return d;
+}
