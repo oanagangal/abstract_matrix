@@ -14,7 +14,7 @@ protected:
 
     bool Triangular() override;
     Matrice_Patratica minor(Matrice_Patratica,int,int,int); // returneaza minor de ordin inferior, folosesc in det()
-    int det(Matrice_Patratica,int);
+    int det(Matrice_Patratica,int);  // calculeaza determinantul
 
 public:
 
