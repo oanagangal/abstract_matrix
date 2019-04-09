@@ -36,7 +36,8 @@ public:
 
     Vector& operator=(Vector);
     int operator*(Vector);
-    Vector operator+(Vector);
+    Vector&operator+(Vector);
+    Vector&operator-(Vector); // modificata in lab
     int operator[](int);
 
 
