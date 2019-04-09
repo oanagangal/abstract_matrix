@@ -24,6 +24,7 @@ public:
 
     Matrice_Patratica&operator=(Matrice_Patratica);
     Matrice_Patratica&operator+(Matrice_Patratica);
+    Matrice_Patratica&operator-(Matrice_Patratica); // modificata in lab
 
     bool Diag_Triangular() override;
     int get_dim(int) override;
