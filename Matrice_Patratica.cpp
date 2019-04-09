@@ -155,3 +155,16 @@ Vector &Matrice_Patratica::get_array(int i)
         cout<<"element matrice inexistent"<<endl;
     return v[i];
 }
+
+Matrice_Patratica &Matrice_Patratica::operator-(Matrice_Patratica m)
+{
+    if(n!=m.n)
+    {
+        cout<<"Matricele nu au dimensiuni corespunzatoare"<<endl;
+        return *this;
+    }
+    for(int i=0;i<n;i++)
+        v[i]=v[i]-m.v[i];
+
+    return *this;
+}
