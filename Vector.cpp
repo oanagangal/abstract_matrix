@@ -128,7 +128,7 @@ int Vector::operator*(Vector p)
 }
 
 
-Vector Vector::operator+(Vector p)
+Vector& Vector::operator+(Vector p)
 {
     if(dim!=p.dim)
     {
@@ -138,6 +138,14 @@ Vector Vector::operator+(Vector p)
     }
     for(int i=0;i<dim;i++)
         a[i]=a[i]+p.a[i];
+
+    return *this;
+}
+
+Vector &Vector::operator-(Vector p)  // modificata in lab
+{
+    for(int i=0;i<dim;i++)
+        a[i]=a[i]-p.a[i];
 
     return *this;
 }
